@@ -25,7 +25,7 @@ public class SimpleShell {
         //we break out with <ctrl c>
         while (true) {
             //read what the user enters
-            System.out.println("cmd? ");
+            System.out.println("Request: ");
             commandLine = console.readLine();
 
             //input parsed into array of strings(command and arguments)
@@ -35,8 +35,8 @@ public class SimpleShell {
             //if the user entered a return, just loop again
             if (commandLine.equals(""))
                 continue;
-            if (commandLine.equals("exit")) {
-                System.out.println("bye!");
+            if (commandLine.equalsIgnoreCase("exit")) {
+                System.out.println("Thank you for visiting!");
                 break;
             }
 
